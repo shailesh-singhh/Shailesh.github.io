@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shailesh Singh - Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/javascript/javascript.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Shailesh Singh</div>
+            <div class="mode-switch">
+                <input type="checkbox" id="mode-toggle">
+                <label for="mode-toggle" class="toggle-label"></label>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <!-- <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div> -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <!-- <li class="dropdown">
+                    <a href="#" class="dropbtn">More ⌵</a>
+                    <div class="dropdown-content">
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#experience">Experience</a>
+                    </div>
+                </li> -->
+                
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1 class="typing-effect"></h1>
+          <h1  >Welcome to My Portfolio</h1>
+                <p>I'm a passionate Web Developer & Software Engineer.</p>
+                <div class="btn-container">
+                <a href="#contact" class="btn">Contact Me</a>
+                <a href="/pdf/RESUME.pdf" download class="btn resume-btn">Download Resume</a>
+                </div>
+    </section>
+    <hr class="border border-primary border-3 opacity-75">
+    <section id="projects">
+        <h2>Projects</h2>
+         <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="web">Web Development</button>
+            <button class="filter-btn" data-category="ml">Machine Learning</button>
+            <button class="filter-btn" data-category="other">Others</button>
+        </div>
+    
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <img src="/image/Untitled design (1).png" alt="Project 1">
+                <h3>Portfolio Website</h3>
+                <p>A modern and responsive personal portfolio.</p>
+                <button class="view-btn" data-id="1">View Details</button>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="/image/Society.jpg" alt="Project 4">
+                <h3>Society Management</h3>
+                <p>A productivity website to manage all task of society.</p>
+                <button class="view-btn" data-id="4">View Details</button>
+            </div>
+            <div class="project-card" data-category="ml">
+                <img src="/image/chatbot.jpg" alt="Project 2">
+                <h3>AI Chatbot</h3>
+                <p>An AI-powered chatbot that interacts with users.</p>
+                <button class="view-btn" data-id="2">View Details</button>
+            </div>
+    
+            <div class="project-card" data-category="other">
+                <img src="/image/Task.jpg" alt="Project 3">
+                <h3>Reward System</h3>
+                <p>This project  to provide feedback on portfolios by  blockchain-based tokens.</p>
+                <button class="view-btn" data-id="3">View Details</button>
+            </div>
+        </div>
+    
+    </section>
+
+             <!-- Lightbox Popup -->
+    <div id="project-popup" class="popup">
+        <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="popup-title"></h2>
+        <img id="popup-img" src="/image/chatbot.jpg" alt="Project">
+        <p id="popup-desc"></p>
+        <a id="popup-link" href="1" target="_blank" class="btn">View Project</a>
+     </div>
+    </div>
+    <hr class="border border-primary border-3 opacity-75">
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="orbit-container">
+            <div class="center-core" style="color: black;">SKILLS</div>
+            <div class="orbit">
+                <div class="skill planet" data-skill="Java">Java Advance</div>
+                <div class="skill planet" data-skill="C++">C++</div>
+                <div class="skill planet" data-skill="DSA">DSA</div>
+                <div class="skill planet" data-skill="PowerBI">PowerBI</div>
+                <div class="skill planet" data-skill="HTML">MERN</div>
+                <div class="skill planet" data-skill="CSS">MY Sql</div>
+                <div class="skill planet" data-skill="JS">Machine Learning</div>
+                <div class="skill planet" data-skill="MongoDB">Generative AI</div>
+                
+            </div>
+        </div>
+    
+        <!-- Skill Details Popup -->
+        <div id="skill-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="popup-title"></h2>
+                <p id="popup-desc"></p>
+            </div>
+        </div>
+    </section>
+    <hr class="border border-primary border-3 opacity-75">
+    <section id="experience" class="experience">
+        <h2>My Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item" data-year="2024">
+                <div class="icon">💼</div>
+                <div class="content">
+                    <h3>Internship at Swiggy</h3>
+                    <p>Worked as a <b>non-technical intern</b>, gaining hands-on experience in business operations and logistics.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2025">
+                <div class="icon">💻</div>
+                <div class="content">
+                    <h3>Web Development Internship - CodSoft</h3>
+                    <p>Developed <b>responsive websites</b> and optimized UI/UX for real-world projects.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2024">
+                <div class="icon">📚</div>
+                <div class="content">
+                    <h3>Machine Learning & Generative AI Workshop</h3>
+                    <p>Attended workshops focusing on <b>AI, deep learning, and generative models</b>.</p>
+                </div>
+            </div>
+            <div class="timeline-item" data-year="2025">
+                <div class="icon">⚡</div>
+                <div class="content">
+                    <h3>Blockchain Hackathon</h3>
+                    <p>Competed in a high-level hackathon, building <b>decentralized blockchain solutions</b>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="border border-primary border-3 opacity-75">
+    <section id="contact" class="contact-section">
+        <h2>Get in Touch</h2>
+    
+        <div class="contact-container">
+            <!-- Contact Options -->
+            <div class="contact-info">
+                <a href="mailto:singhshailesh2901@gmail.com" target="_blank" class="contact-item">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="tel:+918400323778" class="contact-item">
+                    <i class="fas fa-phone"></i> Call Me
+                </a>
+                <a href="https://wa.me/918400323778" target="_blank" class="contact-item">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://www.linkedin.com/in/singhshailesh2/" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/shailesh-singhh" target="_blank" class="contact-item">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <div class="divider"></div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form id="messageForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="send-btn">Send Message</button>
+                </form>
+                <p class="status-message" id="statusMessage"></p>
+            </div>
+        </div>
+       
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <p>© 2025 Shailesh Singh. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a> |
+                <a href="#projects">Projects</a> |
+                <a href="#skills">Skills</a> |
+                <a href="#experience">Experience</a> |
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/yourgithub" target="_blank">GitHub</a> |
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+        </div>
+    </footer>
+    
+   
+</body>
+</html>
